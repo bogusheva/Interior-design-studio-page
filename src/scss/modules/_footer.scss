@@ -1,0 +1,109 @@
+.footer {
+  background: $black;
+
+  &__wrapper {
+    padding: 10px 0 15px;
+  }
+
+  &__content {
+    max-width: $max-width;
+    margin: 0 auto;
+    @include flex(space-between, center, row);
+    color: $white;
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__copyright {
+    @include flex(center, flex-start, column);
+    @include tablet {
+      align-items: center;
+    }
+  }
+
+  &__contacts {
+    @include flex(space-between, flex-end, column);
+    @include tablet {
+      align-items: center;
+    }
+  }
+}
+
+.copyright-block {
+  &__image {
+    width: 110px;
+    margin-top: 6px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2;
+    text-align: center;
+  }
+}
+.contacts {
+  & a {
+    color: $white;
+  }
+  &__upper {
+    display: flex;
+    align-items: center;
+    margin-top: 26px;
+    @include desktop {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    @include tablet_md {
+      flex-direction: column;
+      align-items: center;
+    }
+    @include tablet {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    @include tablet_sm {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    &_location {
+      margin-right: 40px;
+      @include desktop {
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
+      @include tablet {
+        margin-right: 20px;
+      }
+      @include mobile {
+        margin-right: 0px;
+      }
+    }
+    &_number {
+      @include desktop {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__socials {
+    max-width: 196px;
+    width: 100%;
+    @include flex(space-between, center, row);
+  }
+}
+.location,
+.number {
+  margin-bottom: 20px;
+  &__link {
+    @include flex(flex-start, center, row);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 2;
+    & span {
+      margin-right: 10px;
+    }
+  }
+}

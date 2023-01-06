@@ -1,0 +1,56 @@
+.team {
+  &__wrapper {
+    padding: 60px 0;
+  }
+  &__content {
+    width: 100%;
+    @include flex(center, center, column);
+  }
+}
+.members {
+  max-width: $max-width;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @include tablet {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__block {
+    width: 32%;
+    @include flex(center, center, column);
+
+    @include tablet {
+      width: 48%;
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      width: 90%;
+    }
+
+    &_img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &_name {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    &_position {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.625;
+      margin-bottom: 20px;
+    }
+
+    &_networks {
+      @include flex(space-between, center, row);
+      max-width: 196px;
+      width: 100%;
+    }
+  }
+}
